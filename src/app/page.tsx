@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
@@ -27,8 +28,15 @@ import { CompanyDropdown } from "@/components/company-dropdown"
 import { ResourcesDropdown } from "@/components/resources-dropdown"
 import { TopBar } from "@/components/top-bar"
 import { ImageComparisonSlider } from "@/components/image-comaprison-slider"
+import AutoPlayVideo from "@/components/AutoPlayVideo"
 
 export default function HomePage() {
+
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = () => {
+    setIsPlaying(true);
+  };
   return (
     <div className="min-h-screen bg-white">
       {/* Top Bar */}
@@ -125,30 +133,41 @@ export default function HomePage() {
             </div>
 
             {/* Right Content - Video */}
-            <div className="relative">
-              <div className="relative rounded-lg overflow-hidden shadow-2xl">
-                <Image
-                  src="/placeholder.svg?height=400&width=600"
-                  alt="Joshua Flores - Psychiatric Nurse Practitioner testimonial video"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Button
-                    size="lg"
-                    className="w-16 h-16 rounded-full bg-white/90 hover:bg-white text-blue-600 shadow-lg"
-                  >
-                    <Play className="w-6 h-6 ml-1" fill="currentColor" />
-                  </Button>
-                </div>
-                {/* Video Info Overlay */}
-                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-3">
-                  <div className="text-sm font-semibold text-gray-800">Joshua Flores</div>
-                  <div className="text-xs text-gray-600">Psychiatric Nurse Practitioner</div>
-                </div>
-              </div>
+         <div className="relative">
+      <div className="relative rounded-lg overflow-hidden shadow-2xl" style={{ width: '600px', height: '400px' }}>
+        {isPlaying ? (
+          <iframe
+            width="600"
+            height="400"
+            src="https://www.youtube.com/embed/To8tul_TsWE?autoplay=1&controls=1&rel=0"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          />
+        ) : (
+          <>
+            <img
+              src="/v1.png?height=400&width=600"
+              alt="Video testimonial thumbnail"
+              width={600}
+              height={400}
+              className="w-full h-full"
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <Button
+                size="lg"
+                className="w-16 h-16 rounded-full bg-white/90 hover:bg-white text-blue-600 shadow-lg"
+                onClick={handlePlay}
+              >
+                <Play className="w-6 h-6 ml-1" fill="currentColor" />
+              </Button>
             </div>
+          </>
+        )}
+      </div>
+    </div>
           </div>
 
           {/* Stats Section - Integrated without border */}
@@ -256,46 +275,13 @@ export default function HomePage() {
                 {/* Main Dashboard */}
                 <div className="relative z-10">
                   <Image
-                    src="/placeholder.svg?height=400&width=600"
+                    src="/Product-Screen-Dashboard-rcm-centric.png?height=400&width=600"
                     alt="RCM Centric Dashboard Interface"
                     width={600}
                     height={400}
                     className="w-full h-auto rounded-lg shadow-xl"
                   />
-                </div>
-
-                {/* Video Call Overlay */}
-                <div className="absolute -top-4 -right-4 z-20">
-                  <Image
-                    src="/placeholder.svg?height=150&width=200"
-                    alt="Medical Team Video Call"
-                    width={200}
-                    height={150}
-                    className="rounded-lg shadow-lg border-4 border-white"
-                  />
-                </div>
-
-                {/* Analytics Chart Overlay */}
-                <div className="absolute -bottom-6 -left-6 z-20">
-                  <Image
-                    src="/placeholder.svg?height=120&width=180"
-                    alt="Analytics Dashboard"
-                    width={180}
-                    height={120}
-                    className="rounded-lg shadow-lg border-4 border-white"
-                  />
-                </div>
-
-                {/* Patient Portal Overlay */}
-                <div className="absolute top-1/2 -right-8 z-20">
-                  <Image
-                    src="/placeholder.svg?height=200&width=150"
-                    alt="Patient Portal Interface"
-                    width={150}
-                    height={200}
-                    className="rounded-lg shadow-lg border-4 border-white"
-                  />
-                </div>
+                </div> 
               </div>
             </div>
           </div>
@@ -558,7 +544,8 @@ export default function HomePage() {
   {/* Provider Column */}
   <div className="text-center flex-shrink-0">
     <div className="flex justify-center mb-4">
-      <div className="w-32 h-32 bg-blue-50 rounded-full flex items-center justify-center overflow-hidden shadow-lg border-4 border-blue-200">
+      <div className="w-32 h-32 bg-blue-50 rounded-full flex items-center
+       justify-center overflow-hidden shadow-lg border-4 border-blue-200">
         <Image
           src="/provider.jpg"
           alt="Provider - Healthcare Professional"
@@ -574,8 +561,8 @@ export default function HomePage() {
   {/* Comparison Slider - Center */}
   <div className="flex-1 max-w-2xl">
     <ImageComparisonSlider
-      beforeImage="w_rcm.jpg"
-      afterImage="with_rcm.jpg"
+      beforeImage="/w_rcm.jpg"
+      afterImage="/with_rcm.jpg"
       beforeLabel="Without RCM Centric"
       afterLabel="With RCM Centric"
     />
@@ -624,17 +611,8 @@ export default function HomePage() {
                 </p>
 
                 {/* Video Placeholder */}
-                <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center border-2 border-dashed border-gray-400">
-                  <video
-                    className="w-full h-full object-cover rounded-lg"
-                    controls
-                    src="/path/to/your/video.mp4"
-                    poster="/path/to/your/video-poster.jpg"
-                  >
-                    <source src="/path/to/your/video.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
+                
+                <AutoPlayVideo />
               </div>
             </div>
 
