@@ -26,9 +26,9 @@ import { SolutionsDropdown } from "@/components/solutions-dropdown"
 import { SpecialtiesDropdown } from "@/components/specialities-dropdown"
 import { CompanyDropdown } from "@/components/company-dropdown"
 import { ResourcesDropdown } from "@/components/resources-dropdown"
-import { TopBar } from "@/components/top-bar"
 import { ImageComparisonSlider } from "@/components/image-comaprison-slider"
 import AutoPlayVideo from "@/components/AutoPlayVideo"
+import SolutionsAndServices from "@/components/SolutionsAndServices"
 
 export default function HomePage() {
 
@@ -39,41 +39,6 @@ export default function HomePage() {
   };
   return (
     <div className="min-h-screen bg-white">
-      {/* Top Bar */}
-      <TopBar />
-
-      {/* Header */}
-      <header className="bg-white border-b border-gray-100 px-4 py-4 relative">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center animate-logo-move">
-              <span className="text-white font-bold text-sm">RCM</span>
-            </div>
-            <div className="text-gray-800 overflow-hidden">
-              <div className="font-bold text-lg animate-slide-in-right">RCM</div>
-              <div className="text-sm -mt-1 animate-slide-in-right">Centric</div>
-            </div>
-          </div>
-
-          {/* Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            <SolutionsDropdown />
-            <SpecialtiesDropdown />
-            <div className="text-gray-700 hover:text-red-500 cursor-pointer">Why RCM Centric</div>
-            <CompanyDropdown />
-            <ResourcesDropdown />
-          </nav>
-
-          {/* CTA Buttons */}
-          <div className="flex items-center space-x-4">
-            <Button variant="outline" className="border-red-300 text-red-500 hover:bg-red-50 bg-transparent">
-              Get Pricing
-            </Button>
-            <Button className="bg-blue-600 hover:bg-blue-700">Contact Us</Button>
-          </div>
-        </div>
-      </header>
 
       {/* Hero Section with Stats */}
       <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 overflow-hidden">
@@ -328,199 +293,12 @@ export default function HomePage() {
           </div>
 
           {/* Services Description */}
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-700 mb-6">Centric Solutions & Services</h2>
-            <div className="w-24 h-1 bg-red-500 mx-auto mb-8"></div>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Unlock explosive revenue growth and empower your practice with accurate claim processing. Connect with our
-              team to learn how honest and reliable medical claims solutions can help your business succeed.
-            </p>
-          </div>
+          
         </div>
       </section>
+{/* Services Description */}
 
-      {/* Services Grid Section */}
-      <section className="bg-gray-50 py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Medical Billing Services */}
-            <Card className="bg-white hover:bg-blue-600 hover:shadow-lg transition-all duration-300 cursor-pointer group">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-white transition-colors">
-                  <FileText className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800 group-hover:text-white mb-3 transition-colors">
-                  MEDICAL BILLING SERVICES
-                </h3>
-                <p className="text-gray-600 group-hover:text-blue-100 text-sm mb-4 leading-relaxed transition-colors">
-                  Offering End-To-End medical billing from demo entry to payment posting, with advanced monthly or
-                  weekly reporting so you can notice what's going on.
-                </p>
-                <Button
-                  variant="outline"
-                  className="text-blue-600 border-blue-600 group-hover:bg-white group-hover:text-blue-600 group-hover:border-white bg-transparent transition-colors"
-                >
-                  Explore <ExternalLink className="w-4 h-4 ml-2" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Medical Coding Services */}
-            <Card className="bg-white hover:bg-blue-600 hover:shadow-lg transition-all duration-300 cursor-pointer group">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-white transition-colors">
-                  <Code className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800 group-hover:text-white mb-3 transition-colors">
-                  MEDICAL CODING SERVICES
-                </h3>
-                <p className="text-gray-600 group-hover:text-blue-100 text-sm mb-4 leading-relaxed transition-colors">
-                  Outsourcing your medical coding services to expert coders at RCM Centric enables you to optimize your
-                  revenue while reducing compliance risks.
-                </p>
-                <Button
-                  variant="outline"
-                  className="text-blue-600 border-blue-600 group-hover:bg-white group-hover:text-blue-600 group-hover:border-white bg-transparent transition-colors"
-                >
-                  Explore <ExternalLink className="w-4 h-4 ml-2" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* DME / Ambulatory Billing Services */}
-            <Card className="bg-white hover:bg-blue-600 hover:shadow-lg transition-all duration-300 cursor-pointer group">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-white transition-colors">
-                  <Wheelchair className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800 group-hover:text-white mb-3 transition-colors">
-                  DME / AMBULATORY BILLING SERVICES
-                </h3>
-                <p className="text-gray-600 group-hover:text-blue-100 text-sm mb-4 leading-relaxed transition-colors">
-                  Forget your worries at leading DME billing, and you can boost your revenue by using our 24/7 durable
-                  medical equipment (DME) Billing and Coding experts.
-                </p>
-                <Button
-                  variant="outline"
-                  className="text-blue-600 border-blue-600 group-hover:bg-white group-hover:text-blue-600 group-hover:border-white bg-transparent transition-colors"
-                >
-                  Explore <ExternalLink className="w-4 h-4 ml-2" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Hospital Billing Services */}
-            <Card className="bg-white hover:bg-blue-600 hover:shadow-lg transition-all duration-300 cursor-pointer group">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-white transition-colors">
-                  <Building2 className="w-8 h-8 text-red-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800 group-hover:text-white mb-3 transition-colors">
-                  HOSPITAL BILLING SERVICES
-                </h3>
-                <p className="text-gray-600 group-hover:text-blue-100 text-sm mb-4 leading-relaxed transition-colors">
-                  Working with RCM Centric, you enjoy the long-term benefits of our revenue cycle specialists providing
-                  efficient billing services to hospitals.
-                </p>
-                <Button
-                  variant="outline"
-                  className="text-blue-600 border-blue-600 group-hover:bg-white group-hover:text-blue-600 group-hover:border-white bg-transparent transition-colors"
-                >
-                  Explore <ExternalLink className="w-4 h-4 ml-2" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Practice Audit Services */}
-            <Card className="bg-white hover:bg-blue-600 hover:shadow-lg transition-all duration-300 cursor-pointer group">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-white transition-colors">
-                  <ClipboardCheck className="w-8 h-8 text-purple-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800 group-hover:text-white mb-3 transition-colors">
-                  PRACTICE AUDIT SERVICES
-                </h3>
-                <p className="text-gray-600 group-hover:text-blue-100 text-sm mb-4 leading-relaxed transition-colors">
-                  Want smooth practice? Our billing and coding experts will initiate an audit for you to find billing
-                  issues and update your practice with the latest tech.
-                </p>
-                <Button
-                  variant="outline"
-                  className="text-blue-600 border-blue-600 group-hover:bg-white group-hover:text-blue-600 group-hover:border-white bg-transparent transition-colors"
-                >
-                  Explore <ExternalLink className="w-4 h-4 ml-2" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Credentialing & Enrollment */}
-            <Card className="bg-white hover:bg-blue-600 hover:shadow-lg transition-all duration-300 cursor-pointer group">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-white transition-colors">
-                  <Award className="w-8 h-8 text-yellow-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800 group-hover:text-white mb-3 transition-colors">
-                  CREDENTIALING & ENROLLMENT
-                </h3>
-                <p className="text-gray-600 group-hover:text-blue-100 text-sm mb-4 leading-relaxed transition-colors">
-                  Our experienced team manages the credentialing process, which helps you navigate the process of
-                  provider enrollment and credentialing with insurance.
-                </p>
-                <Button
-                  variant="outline"
-                  className="text-blue-600 border-blue-600 group-hover:bg-white group-hover:text-blue-600 group-hover:border-white bg-transparent transition-colors"
-                >
-                  Explore <ExternalLink className="w-4 h-4 ml-2" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Telehealth Billing Services */}
-            <Card className="bg-white hover:bg-blue-600 hover:shadow-lg transition-all duration-300 cursor-pointer group">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-cyan-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-white transition-colors">
-                  <Monitor className="w-8 h-8 text-cyan-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800 group-hover:text-white mb-3 transition-colors">
-                  TELEHEALTH BILLING SERVICES
-                </h3>
-                <p className="text-gray-600 group-hover:text-blue-100 text-sm mb-4 leading-relaxed transition-colors">
-                  Connect with your patient easily and get an automated billing solution. We help providers to connect
-                  with patients virtually with integrated technology.
-                </p>
-                <Button
-                  variant="outline"
-                  className="text-blue-600 border-blue-600 group-hover:bg-white group-hover:text-blue-600 group-hover:border-white bg-transparent transition-colors"
-                >
-                  Explore <ExternalLink className="w-4 h-4 ml-2" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Patient Help Desk Services */}
-            <Card className="bg-white hover:bg-blue-600 hover:shadow-lg transition-all duration-300 cursor-pointer group">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-white transition-colors">
-                  <Headphones className="w-8 h-8 text-indigo-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800 group-hover:text-white mb-3 transition-colors">
-                  PATIENT HELP DESK SERVICES
-                </h3>
-                <p className="text-gray-600 group-hover:text-blue-100 text-sm mb-4 leading-relaxed transition-colors">
-                  RCM Centric provides dedicated help desk services for hospitals, medical centers, health clinics, and
-                  private doctor's practices throughout the United States.
-                </p>
-                <Button
-                  variant="outline"
-                  className="text-blue-600 border-blue-600 group-hover:bg-white group-hover:text-blue-600 group-hover:border-white bg-transparent transition-colors"
-                >
-                  Explore <ExternalLink className="w-4 h-4 ml-2" />
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      <SolutionsAndServices />
 
       {/* Centric Solution Section */}
       <section className="bg-white py-16 lg:py-24">
