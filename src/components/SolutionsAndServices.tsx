@@ -2,14 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import {
   ExternalLink,
-  FileText,
-  Code,
-  ShipWheelIcon as Wheelchair,
-  Building2,
-  ClipboardCheck,
-  Award,
-  Monitor,
-  Headphones,
+  
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
