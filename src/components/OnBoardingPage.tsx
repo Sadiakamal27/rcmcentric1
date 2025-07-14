@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Check, ExternalLink } from "lucide-react";
+
 import React from "react";
 
 export default function OnboardingPage() {
@@ -61,7 +61,7 @@ const [isVisible, setIsVisible] = useState(false);
               loop
               muted
               src="/rcm-centric-video-animation-0012.mp4"
-              poster="/path/to/your/video-poster.jpg"
+             preload="metadata"
             >
               <source src="/why-choose-rcm-centric.mp4" type="video/mp4" />
               Your browser does not support the video tag.
