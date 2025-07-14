@@ -76,11 +76,11 @@ export function ImageComparisonSlider({
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-80 overflow-hidden rounded-lg shadow-xl border-4 border-gray-200 cursor-col-resize select-none bg-gray-100"
+      className="relative w-300 h-100 items-center overflow-hidden rounded-lg    cursor-col-resize select-none"
       style={{ maxWidth: "600px" }}
     >
       {/* After Image (Right side - With RCM) */}
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div className="absolute inset-1 flex items-center justify-center">
         <Image
           src={validAfterImage}
           alt={afterLabel}
