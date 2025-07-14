@@ -74,6 +74,7 @@ export default function RCMCentricSection() {
                       width={64}
                       height={64}
                       className="w-12 h-12"
+                     
                     />
                   </div>
                 </div>
