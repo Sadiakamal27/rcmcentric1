@@ -20,13 +20,13 @@ export function SolutionsDropdown() {
           <div className="bg-gradient-to-br from-blue-600 to-blue-700 p-4 text-white">
             <div className="space-y-2">
               {/* Illustration */}
-              <div className="relative w-32 h-24 mx-auto">
+              <div className="relative w-39 h-50 mx-auto">
                 <Image
-                  src="/placeholder.svg?height=96&width=128"
+                  src="/solutions.jpg?height=96&width=128"
                   alt="Provider Centric Solution Illustration"
-                  width={128}
+                  width={39}
                   height={96}
-                  className="w-full h-full object-contain"
+                  className="w-100 h-44 object-contain"
                 />
               </div>
 
@@ -49,12 +49,18 @@ export function SolutionsDropdown() {
           </div>
 
           {/* Right Side - Services List */}
-          <div className="bg-white p-4">
+          <div className="bg-blue-100 p-4">
             <div className="space-y-4">
               {/* Medical Billing Services */}
-              <div className="flex items-start space-x-3 group cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors">
-                <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center group-hover:bg-blue-100 transition-colors">
-                  <BarChart3 className="w-4 h-4 text-blue-600" />
+              <div className="flex items-start space-x-3 group cursor-pointer  p-2 rounded-lg transition-colors">
+                <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center  transition-colors">
+                  <div className="w-16 h-16  rounded-lg flex items-center justify-center mx-auto   transition-colors">
+                    <img
+                      src="/bill.png"
+                      alt="Telehealth Billing Icon"
+                      className="w-12 h-12 object-contain"
+                    />
+                  </div>
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold text-blue-600 group-hover:text-blue-700">
@@ -67,9 +73,15 @@ export function SolutionsDropdown() {
               </div>
 
               {/* Medical Coding Services */}
-              <div className="flex items-start space-x-3 group cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors">
-                <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center group-hover:bg-blue-100 transition-colors">
-                  <FileText className="w-4 h-4 text-blue-600" />
+              <div className="flex items-start space-x-3 group cursor-pointer  p-2 rounded-lg transition-colors">
+                <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center  transition-colors">
+                  <div className="w-16 h-16  rounded-lg flex items-center justify-center mx-auto   transition-colors">
+                    <img
+                      src="/coding.png"
+                      alt="Telehealth Billing Icon"
+                      className="w-12 h-12 object-contain"
+                    />
+                  </div>
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold text-blue-600 group-hover:text-blue-700">
@@ -82,9 +94,15 @@ export function SolutionsDropdown() {
               </div>
 
               {/* Credentialing & Enrollment */}
-              <div className="flex items-start space-x-3 group cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors">
-                <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center group-hover:bg-blue-100 transition-colors">
-                  <Award className="w-4 h-4 text-blue-600" />
+              <div className="flex items-start space-x-3 group cursor-pointer  p-2 rounded-lg transition-colors">
+                <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center  transition-colors">
+                   <div className="w-16 h-16  rounded-lg flex items-center justify-center mx-auto   transition-colors">
+                    <img
+                      src="/diploma.png"
+                      alt="Telehealth Billing Icon"
+                      className="w-12 h-12 object-contain"
+                    />
+                  </div>
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold text-blue-600 group-hover:text-blue-700">
@@ -97,9 +115,15 @@ export function SolutionsDropdown() {
               </div>
 
               {/* Patient Help Desk */}
-              <div className="flex items-start space-x-3 group cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors">
-                <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center group-hover:bg-blue-100 transition-colors">
-                  <Headphones className="w-4 h-4 text-blue-600" />
+              <div className="flex items-start space-x-3 group cursor-pointer  p-2 rounded-lg transition-colors">
+                <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center  transition-colors">
+                   <div className="w-16 h-16  rounded-lg flex items-center justify-center mx-auto   transition-colors">
+                    <img
+                      src="/registration.png"
+                      alt="Telehealth Billing Icon"
+                      className="w-12 h-12 object-contain"
+                    />
+                  </div>
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold text-blue-600 group-hover:text-blue-700">Patient Help Desk</h4>
@@ -110,9 +134,15 @@ export function SolutionsDropdown() {
               </div>
 
               {/* IT Support Services */}
-              <div className="flex items-start space-x-3 group cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition-colors">
-                <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center group-hover:bg-blue-100 transition-colors">
-                  <Settings className="w-4 h-4 text-blue-600" />
+              <div className="flex items-start space-x-3 group cursor-pointer  p-2 rounded-lg transition-colors">
+                <div className="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center  transition-colors">
+                  <div className="w-16 h-16  rounded-lg flex items-center justify-center mx-auto   transition-colors">
+                    <img
+                      src="/information-desk.png"
+                      alt="Telehealth Billing Icon"
+                      className="w-12 h-12 object-contain"
+                    />
+                  </div>
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold text-blue-600 group-hover:text-blue-700">IT Support Services</h4>
