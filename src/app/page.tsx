@@ -1,10 +1,16 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Card, CardContent } from "@/components/ui/card"
+import { useState } from "react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Play,
   MessageCircle,
@@ -21,20 +27,16 @@ import {
   Award,
   Monitor,
   Headphones,
-} from "lucide-react"
-import { SolutionsDropdown } from "@/components/solutions-dropdown"
-import { SpecialtiesDropdown } from "@/components/specialities-dropdown"
-import { CompanyDropdown } from "@/components/company-dropdown"
-import { ResourcesDropdown } from "@/components/resources-dropdown"
-import { ImageComparisonSlider } from "@/components/image-comaprison-slider"
-import AutoPlayVideo from "@/components/AutoPlayVideo"
-import SolutionsAndServices from "@/components/SolutionsAndServices"
-import MedicalBillingSection from "@/components/MedicalBillingsection"
-import RCMCentricSection from "@/components/RcmCentricsection"
-import OnboardingPage from "@/components/OnBoardingPage"
-import ScaleMedicalPracticeRevenue from "@/components/ScaleMedicalPracticeRevenue"
-export default function HomePage() {
+} from "lucide-react";
 
+import { ImageComparisonSlider } from "@/components/image-comaprison-slider";
+import SolutionsAndServices from "@/components/SolutionsAndServices";
+import MedicalBillingSection from "@/components/MedicalBillingsection";
+import RCMCentricSection from "@/components/RcmCentricsection";
+import OnboardingPage from "@/components/OnBoardingPage";
+import RCMBenefitSection from "@/components/RCMBenefitSection";
+import ExpertiseSection from "@/components/ExpertiseSection";
+export default function HomePage() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlay = () => {
@@ -42,9 +44,8 @@ export default function HomePage() {
   };
   return (
     <div className="min-h-screen bg-white">
-
       {/* Hero Section with Stats */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 overflow-hidden">
+      <section className="relative bg-gradient-to-br bg-[#0B1B39]  overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-32 h-32 border border-white/20 rounded-full"></div>
@@ -53,12 +54,14 @@ export default function HomePage() {
           <div className="absolute bottom-32 right-20 w-20 h-20 border border-white/20 rounded-full"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 py-16 lg:py-24">
+        <div className="relative max-w-7xl ] mx-auto px-4 py-16 lg:py-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             {/* Left Content */}
             <div className="text-white space-y-8">
               <div className="space-y-4">
-                <p className="text-blue-200 text-lg">Provider Practice Centric</p>
+                <p className="text-white text-lg">
+                  Provider Practice Centric
+                </p>
                 <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
                   <span className="border-l-4 border-red-400 pl-4">
                     Top-tier Revenue Cycle Management For Each Medical Specialty
@@ -66,22 +69,28 @@ export default function HomePage() {
                 </h1>
               </div>
 
-              <div className="space-y-4 text-blue-100">
+              <div className="space-y-4 text-white">
                 <p>
                   For over 10 years, our{" "}
-                  <span className="text-red-400 font-semibold">medical billing company in the USA</span> have been
-                  helping physicians, clinics, group practices, and hospital-owned physician groups with their medical
-                  billing and coding tasks.
+                  <span className="text-red-400 font-semibold">
+                    medical billing company in the USA
+                  </span>{" "}
+                  have been helping physicians, clinics, group practices, and
+                  hospital-owned physician groups with their medical billing and
+                  coding tasks.
                 </p>
                 <p>
-                  Establish and grow a healthy practice with RCM Centric's advanced healthcare medical billing services
-                  & coding, including unique strategy and integrated technology.
+                  Establish and grow a healthy practice with RCM Centric's
+                  advanced healthcare medical billing services & coding,
+                  including unique strategy and integrated technology.
                 </p>
               </div>
 
               {/* Form Section */}
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold">Get a Solution for Your Medical Practice</h3>
+                <h3 className="text-xl font-semibold">
+                  Get a Solution for Your Medical Practice
+                </h3>
                 <div className="flex flex-col sm:flex-row gap-4 max-w-md">
                   <Select>
                     <SelectTrigger className="bg-white text-gray-700 border-0">
@@ -95,47 +104,51 @@ export default function HomePage() {
                       <SelectItem value="primary-care">Primary Care</SelectItem>
                     </SelectContent>
                   </Select>
-                  <Button className="bg-red-500 hover:bg-red-600 text-white px-8">Get Solution →</Button>
+                  <Button className="bg-red-500 hover:bg-red-600 text-white px-8">
+                    Get Solution →
+                  </Button>
                 </div>
               </div>
             </div>
 
             {/* Right Content - Video */}
-         <div className="relative">
-      <div className="relative rounded-lg overflow-hidden shadow-2xl" style={{ width: '600px', height: '400px' }}>
-        {isPlaying ? (
-          <iframe
-            width="600"
-            height="400"
-            src="https://www.youtube.com/embed/To8tul_TsWE?autoplay=1&controls=1&rel=0"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full"
-          />
-        ) : (
-          <>
-            <img
-              src="/v1.png?height=400&width=600"
-              alt="Video testimonial thumbnail"
-              width={600}
-              height={400}
-              className="w-full h-full"
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <Button
-                size="lg"
-                className="w-16 h-16 rounded-full bg-white/90 hover:bg-white text-blue-600 shadow-lg"
-                onClick={handlePlay}
+            <div className="relative">
+              <div
+                className="relative rounded-lg overflow-hidden shadow-2xl"
+                style={{ width: "600px", height: "400px" }}
               >
-                <Play className="w-6 h-6 ml-1" fill="currentColor" />
-              </Button>
+                {isPlaying ? (
+                  <iframe
+                    width="600"
+                    height="400"
+                    src="https://www.youtube.com/embed/To8tul_TsWE?autoplay=1&controls=1&rel=0"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                ) : (
+                  <>
+                    <img
+                      src="/v1.png?height=400&width=600"
+                      alt="Video testimonial thumbnail"
+                      width={600}
+                      height={400}
+                      className="w-full h-full"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Button
+                        size="lg"
+                        className="w-16 h-16 rounded-full bg-white/90 hover:bg-white text-blue-600 shadow-lg"
+                        onClick={handlePlay}
+                      >
+                        <Play className="w-6 h-6 ml-1" fill="currentColor" />
+                      </Button>
+                    </div>
+                  </>
+                )}
+              </div>
             </div>
-          </>
-        )}
-      </div>
-    </div>
           </div>
 
           {/* Stats Section - Integrated without border */}
@@ -148,7 +161,9 @@ export default function HomePage() {
                 </div>
                 <div className="text-left">
                   <div className="text-3xl lg:text-4xl font-bold">25%</div>
-                  <div className="text-blue-100 text-sm">Increase Cash Flow</div>
+                  <div className="text-blue-100 text-sm">
+                    Increase Cash Flow
+                  </div>
                 </div>
               </div>
 
@@ -161,7 +176,9 @@ export default function HomePage() {
                 </div>
                 <div className="text-left">
                   <div className="text-3xl lg:text-4xl font-bold">97%</div>
-                  <div className="text-blue-100 text-sm">Net Collection Rate</div>
+                  <div className="text-blue-100 text-sm">
+                    Net Collection Rate
+                  </div>
                 </div>
               </div>
 
@@ -183,7 +200,9 @@ export default function HomePage() {
                 </div>
                 <div className="text-left">
                   <div className="text-3xl lg:text-4xl font-bold">99%</div>
-                  <div className="text-blue-100 text-sm">Client Success Rate</div>
+                  <div className="text-blue-100 text-sm">
+                    Client Success Rate
+                  </div>
                 </div>
               </div>
             </div>
@@ -192,7 +211,10 @@ export default function HomePage() {
 
         {/* Chat Widget */}
         <div className="fixed bottom-6 left-6 z-50">
-          <Button size="lg" className="w-14 h-14 rounded-full bg-blue-600 hover:bg-blue-700 shadow-lg">
+          <Button
+            size="lg"
+            className="w-14 h-14 rounded-full bg-blue-600 hover:bg-blue-700 shadow-lg"
+          >
             <MessageCircle className="w-6 h-6" />
           </Button>
         </div>
@@ -213,7 +235,9 @@ export default function HomePage() {
             {/* Left Content */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <p className="text-red-500 text-lg font-medium">Increase Your Practice Revenue by 15%-20%</p>
+                <p className="text-red-500 text-lg font-medium">
+                  Increase Your Practice Revenue by 15%-20%
+                </p>
                 <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
                   Maximize Profitability & <br />
                   Minimize Errors With <br />
@@ -223,10 +247,13 @@ export default function HomePage() {
 
               <div className="space-y-4">
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  Are you looking for faster payment processing for your medical billing? Wish to reduce billing
-                  overheads on various specialty billings that you frequently generate? RCM's advanced billing solutions
-                  ensure that your billings forge higher net collections in less time. RCM Centric offers advanced
-                  medical billing & coding services for a wide range of healthcare specialties.
+                  Are you looking for faster payment processing for your medical
+                  billing? Wish to reduce billing overheads on various specialty
+                  billings that you frequently generate? RCM's advanced billing
+                  solutions ensure that your billings forge higher net
+                  collections in less time. RCM Centric offers advanced medical
+                  billing & coding services for a wide range of healthcare
+                  specialties.
                 </p>
               </div>
 
@@ -249,7 +276,7 @@ export default function HomePage() {
                     height={400}
                     className="w-full h-auto rounded-lg shadow-xl"
                   />
-                </div> 
+                </div>
               </div>
             </div>
           </div>
@@ -296,10 +323,9 @@ export default function HomePage() {
           </div>
 
           {/* Services Description */}
-          
         </div>
       </section>
-{/* Services Description */}
+      {/* Services Description */}
 
       <SolutionsAndServices />
 
@@ -312,59 +338,64 @@ export default function HomePage() {
               A Centric Solution For Your Practice Needs
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              At RCM Centric, we recognize that Practices, Facilities, and Hospitals must be as flexible as their
-              patients. And that's a <strong>challenge</strong> we readily embrace. So whether you're a doctor trying to{" "}
-              <strong>streamline your collection</strong> or a hospital looking to optimize a patient's{" "}
-              <strong>claims capacity</strong>, RCM Centric has the expertise to get you on your way with advanced
-              medical billing & <strong>coding strategies</strong>.
+              At RCM Centric, we recognize that Practices, Facilities, and
+              Hospitals must be as flexible as their patients. And that's a{" "}
+              <strong>challenge</strong> we readily embrace. So whether you're a
+              doctor trying to <strong>streamline your collection</strong> or a
+              hospital looking to optimize a patient's{" "}
+              <strong>claims capacity</strong>, RCM Centric has the expertise to
+              get you on your way with advanced medical billing &{" "}
+              <strong>coding strategies</strong>.
             </p>
           </div>
 
           {/* Provider to Success Layout - All in One Line */}
-          <div className="flex items-center justify-center gap-8 mb-12">
-  {/* Provider Column */}
-  <div className="text-center flex-shrink-0">
-    <div className="flex justify-center mb-4">
-      <div className="w-32 h-32 bg-blue-50 rounded-full flex items-center
-       justify-center overflow-hidden shadow-lg border-4 border-blue-200">
-        <Image
-          src="/provider.jpg"
-          alt="Provider - Healthcare Professional"
-          width={120}
-          height={120}
-          className="w-28 h-28 object-cover"
-        />
-      </div>
-    </div>
-    <h3 className="text-2xl font-bold text-gray-800">Provider</h3>
-  </div>
+          <div className="flex items-center justify-center gap-7 mb-12">
+            {/* Provider Column */}
+            <div className="text-center flex-shrink-0">
+              <div className="flex justify-center mb-4">
+                <div
+                  className="w-32 h-32  rounded-full flex items-center
+       justify-center overflow-hidden shadow-lg border-4 border-blue-200"
+                >
+                  <Image
+                    src="/provider.jpg"
+                    alt="Provider - Healthcare Professional"
+                    width={120}
+                    height={120}
+                    className="w-28 h-28 object-cover"
+                  />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-800">Provider</h3>
+            </div>
 
-  {/* Comparison Slider - Center */}
-  <div className="flex-1 max-w-2xl">
-    <ImageComparisonSlider
-      beforeImage="/w_rcm.jpg"
-      afterImage="/with_rcm.jpg"
-      beforeLabel="Without RCM Centric"
-      afterLabel="With RCM Centric"
-    />
-  </div>
+            {/* Comparison Slider - Center */}
+            <div className="flex-0 max-w-2xl">
+              <ImageComparisonSlider
+                beforeImage="/w_rcm.jpg"
+                afterImage="/with_rcm.jpg"
+                beforeLabel="Without RCM Centric"
+                afterLabel="With RCM Centric"
+              />
+            </div>
 
-  {/* Success Column */}
-  <div className="text-center flex-shrink-0">
-    <div className="flex justify-center mb-4">
-      <div className="w-32 h-32 bg-yellow-50 rounded-full flex items-center justify-center overflow-hidden shadow-lg border-4 border-yellow-200">
-        <Image
-          src="/success.jpg"
-          alt="Success - Trophy"
-          width={120}
-          height={120}
-          className="w-28 h-28 object-cover"
-        />
-      </div>
-    </div>
-    <h3 className="text-2xl font-bold text-gray-800">Success</h3>
-  </div>
-</div>
+            {/* Success Column */}
+            <div className="text-center flex-shrink-0">
+              <div className="flex justify-center mb-4">
+                <div className="w-32 h-32 bg-yellow-50 rounded-full flex items-center justify-center overflow-hidden shadow-lg border-4 border-yellow-200">
+                  <Image
+                    src="/success.jpg"
+                    alt="Success - Trophy"
+                    width={120}
+                    height={120}
+                    className="w-28 h-28 object-cover"
+                  />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-800">Success</h3>
+            </div>
+          </div>
 
           {/* Call to Action Button */}
           <div className="text-center">
@@ -374,14 +405,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Why RCM Centric Section */}
       <RCMCentricSection />
-
       <MedicalBillingSection />
       <OnboardingPage />
-   <ScaleMedicalPracticeRevenue />
-      
+      <RCMBenefitSection />
+
+       <ExpertiseSection />
     </div>
-  )
+  );
 }
