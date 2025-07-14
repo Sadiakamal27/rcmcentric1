@@ -1,11 +1,15 @@
-
 "use client";
 
 import { useState, useEffect, useRef } from "react";
 
-export function useIntersectionObserver({ threshold = 0, rootMargin = "0px" }) {
+interface IntersectionOptions {
+  threshold?: number | number[];
+  rootMargin?: string;
+}
+
+export function useIntersectionObserver({ threshold = 0, rootMargin = "0px" }: IntersectionOptions) {
   const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null); // Explicitly type ref for HTMLDivElement
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -29,7 +33,7 @@ export function useIntersectionObserver({ threshold = 0, rootMargin = "0px" }) {
         observer.unobserve(ref.current);
       }
     };
-  }, [ref, threshold, rootMargin]);
+  }, [threshold, rootMargin]); // Remove ref from dependencies to avoid unnecessary re-renders
 
-  return [ref, isVisible];
+  return [ref, isVisible] as const; // Use 'as const' to ensure tuple type
 }
