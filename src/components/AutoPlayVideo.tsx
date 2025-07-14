@@ -37,7 +37,7 @@ const AutoPlayVideo = () => {
         loop
         muted
         src="/why-choose-rcm-centric.mp4"
-        poster="/path/to/your/video-poster.jpg"
+        preload="metadata"
       >
         <source src="/why-choose-rcm-centric.mp4" type="video/mp4" />
         Your browser does not support the video tag.
