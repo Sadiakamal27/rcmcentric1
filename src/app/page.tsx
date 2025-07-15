@@ -10,6 +10,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import Link from "next/link";
+
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Play,
@@ -59,9 +61,7 @@ export default function HomePage() {
             {/* Left Content */}
             <div className="text-white space-y-8">
               <div className="space-y-4">
-                <p className="text-white text-lg">
-                  Provider Practice Centric
-                </p>
+                <p className="text-white text-lg">Provider Practice Centric</p>
                 <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
                   <span className="border-l-4 border-red-400 pl-4">
                     Top-tier Revenue Cycle Management For Each Medical Specialty
@@ -258,9 +258,11 @@ export default function HomePage() {
               </div>
 
               <div className="pt-4">
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
-                  About Us <ExternalLink className="w-4 h-4 ml-2" />
-                </Button>
+                <Link href="/About" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-blue-600 hover:bg-red-500 scroll-smooth text-white px-8 py-3">
+                    About Us <ExternalLink className="w-4 h-4 ml-2" />
+                  </Button>
+                </Link>
               </div>
             </div>
 
@@ -410,7 +412,7 @@ export default function HomePage() {
       <OnboardingPage />
       <RCMBenefitSection />
 
-       <ExpertiseSection />
+      <ExpertiseSection />
     </div>
   );
 }
