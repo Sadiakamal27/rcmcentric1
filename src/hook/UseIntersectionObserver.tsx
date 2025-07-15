@@ -7,7 +7,7 @@ interface IntersectionOptions {
   rootMargin?: string;
 }
 
-export function useIntersectionObserver({ threshold = 0, rootMargin = "0px" }: IntersectionOptions) {
+export function useIntersectionObserver({ threshold = 0.05, rootMargin = "0px" }: IntersectionOptions) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null); // Explicitly type ref for HTMLDivElement
 
