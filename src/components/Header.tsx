@@ -1,4 +1,6 @@
-import React from "react";
+"use client"
+
+import React, { useState, useEffect } from "react";
 import { SolutionsDropdown } from "./solutions-dropdown";
 import { SpecialtiesDropdown } from "./specialities-dropdown";
 import { CompanyDropdown } from "./company-dropdown";
@@ -6,10 +8,28 @@ import { ResourcesDropdown } from "./resources-dropdown";
 import { Button } from "./ui/button";
 
 function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Set to true when scrolling starts (even a small amount)
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className=" bg-white">
+    <div className="bg-white">
       {/* Header */}
-      <header className="bg-white border-b border-gray-100 px-4 py-4 relative">
+      <header
+        className={`${
+          isScrolled
+            ? "fixed top-0 left-0 w-full z-40 bg-white shadow-md"
+            : "relative"
+        } bg-white border-b border-gray-100 px-4 py-4 transition-all duration-300`}
+      >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
@@ -17,7 +37,7 @@ function Header() {
               <img
                 src="/Logo-Gif.gif"
                 alt="Telehealth Billing Icon"
-                className=" object-contain"
+                className="object-contain"
               />
             </div>
           </div>
