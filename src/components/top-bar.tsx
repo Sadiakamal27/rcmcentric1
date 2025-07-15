@@ -16,6 +16,7 @@ export function TopBar() {
           </a>
           <a href="#" className="text-gray-500 hover:text-blue-700 transition-colors">
             <Linkedin className="w-4 h-4" />
+
           </a>
           <a href="#" className="text-gray-500 hover:text-blue-400 transition-colors">
             <Twitter className="w-4 h-4" />
