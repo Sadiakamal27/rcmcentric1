@@ -2,6 +2,11 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -11,6 +16,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import Link from "next/link";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from '@/components/ui/sheet';
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -38,6 +50,8 @@ import RCMCentricSection from "@/components/RcmCentricsection";
 import OnboardingPage from "@/components/OnBoardingPage";
 import RCMBenefitSection from "@/components/RCMBenefitSection";
 import ExpertiseSection from "@/components/ExpertiseSection";
+import { SolutionsDropdown } from "@/components/solutions-dropdown";
+import SolutionSection from "@/components/SolutionsSection";
 export default function HomePage() {
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -87,28 +101,7 @@ export default function HomePage() {
               </div>
 
               {/* Form Section */}
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold">
-                  Get a Solution for Your Medical Practice
-                </h3>
-                <div className="flex flex-col sm:flex-row gap-4 max-w-md">
-                  <Select>
-                    <SelectTrigger className="bg-white text-gray-700 border-0">
-                      <SelectValue placeholder="Select Your Specialty" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="cardiology">Cardiology</SelectItem>
-                      <SelectItem value="dermatology">Dermatology</SelectItem>
-                      <SelectItem value="orthopedics">Orthopedics</SelectItem>
-                      <SelectItem value="psychiatry">Psychiatry</SelectItem>
-                      <SelectItem value="primary-care">Primary Care</SelectItem>
-                    </SelectContent>
-                  </Select>
-                  <Button className="bg-red-500 hover:bg-red-600 text-white px-8">
-                    Get Solution →
-                  </Button>
-                </div>
-              </div>
+             <SolutionSection />
             </div>
 
             {/* Right Content - Video */}
