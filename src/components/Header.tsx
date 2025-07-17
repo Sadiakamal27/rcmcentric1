@@ -6,6 +6,7 @@ import { SpecialtiesDropdown } from "./specialities-dropdown";
 import { CompanyDropdown } from "./company-dropdown";
 import { ResourcesDropdown } from "./resources-dropdown";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,7 +48,9 @@ function Header() {
             <SolutionsDropdown />
             <SpecialtiesDropdown />
             <div className="text-gray-700 hover:text-red-500 cursor-pointer">
+              <Link href="/WhyRCM" target="_blank" rel="noopener noreferrer">
               Why RCM Centric
+              </Link>
             </div>
             <CompanyDropdown />
             <ResourcesDropdown />
