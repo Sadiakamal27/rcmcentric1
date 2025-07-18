@@ -9,7 +9,7 @@ export function SolutionsDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="flex items-center space-x-1 text-gray-700 hover:text-red-500 cursor-pointer">
+        <button className="flex items-center font-bold space-x-1 text-gray-700 hover:text-red-500 cursor-pointer">
           <span>Solutions</span>
           <ChevronDown className="w-4 h-4" />
         </button>

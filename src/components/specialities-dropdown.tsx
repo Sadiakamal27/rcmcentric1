@@ -31,7 +31,7 @@ export function SpecialtiesDropdown() {
   return (
     <DropdownMenu  >
       <DropdownMenuTrigger asChild>
-        <button className="flex items-center space-x-1 text-gray-700 hover:text-red-500 cursor-pointer">
+        <button className="flex items-center font-bold space-x-1 text-gray-700 hover:text-red-500 cursor-pointer">
           <span>Specialties</span>
           <ChevronDown className="w-3 h-3 " />
         </button>
