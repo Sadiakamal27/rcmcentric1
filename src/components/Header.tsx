@@ -47,7 +47,7 @@ function Header() {
           <nav className="hidden lg:flex items-center space-x-8">
             <SolutionsDropdown />
             <SpecialtiesDropdown />
-            <div className="text-gray-700 hover:text-red-500 cursor-pointer">
+            <div className="text-gray-700 hover:text-red-500 font-bold cursor-pointer">
               <Link href="/WhyRCM" target="_blank" rel="noopener noreferrer">
               Why RCM Centric
               </Link>
@@ -58,13 +58,15 @@ function Header() {
 
           {/* CTA Buttons */}
           <div className="flex items-center space-x-4">
+            <Link href="/Pricing" target="_blank" rel="noopener noreferrer">
             <Button
               variant="outline"
-              className="border-red-300 text-red-500 hover:bg-red-50 bg-transparent"
+              className="border-red-300 rounded-full text-red-500 hover:bg-red-500 hover:text-white bg-transparent"
             >
               Get Pricing
             </Button>
-            <Button className="bg-blue-600 hover:bg-blue-700">
+            </Link>
+            <Button className=" rounded-full bg-blue-600 hover:bg-blue-700 hover:bg-red-500 hover:text-white text-white font-bold">
               Contact Us
             </Button>
           </div>
