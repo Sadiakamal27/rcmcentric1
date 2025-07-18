@@ -2,29 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import Link from "next/link";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetDescription,
-} from '@/components/ui/sheet';
-
-import { Card, CardContent } from "@/components/ui/card";
 import {
   Play,
   MessageCircle,
@@ -33,14 +12,8 @@ import {
   CalendarClock,
   Trophy,
   ExternalLink,
-  FileText,
-  Code,
   ShipWheelIcon as Wheelchair,
-  Building2,
-  ClipboardCheck,
-  Award,
-  Monitor,
-  Headphones,
+  
 } from "lucide-react";
 
 import { ImageComparisonSlider } from "@/components/image-comaprison-slider";
@@ -50,7 +23,6 @@ import RCMCentricSection from "@/components/RcmCentricsection";
 import OnboardingPage from "@/components/OnBoardingPage";
 import RCMBenefitSection from "@/components/RCMBenefitSection";
 import ExpertiseSection from "@/components/ExpertiseSection";
-import { SolutionsDropdown } from "@/components/solutions-dropdown";
 import SolutionSection from "@/components/SolutionsSection";
 export default function HomePage() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -76,32 +48,35 @@ export default function HomePage() {
             <div className="text-white space-y-8">
               <div className="space-y-4">
                 <p className="text-white text-lg">Provider Practice Centric</p>
-                <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
-                  <span className="border-l-4 border-red-400 pl-4">
-                    Top-tier Revenue Cycle Management For Each Medical Specialty
-                  </span>
+                <h1 className="text-3xl lg:text-3xl whitespace-nowrap font-bold leading-tight">
+                  <div className="w-1 h-28 bg-red-500 mt-1">
+                    <div className="ml-4">
+                      Top-tier Revenue <br /> Cycle Management <br /> For Each
+                      Medical Specialty
+                    </div>
+                  </div>
                 </h1>
               </div>
-
-              <div className="space-y-4 text-white">
-                <p>
-                  For over 10 years, our{" "}
-                  <span className="text-red-400 font-semibold">
-                    medical billing company in the USA
-                  </span>{" "}
-                  have been helping physicians, clinics, group practices, and
-                  hospital-owned physician groups with their medical billing and
-                  coding tasks.
-                </p>
-                <p>
-                  Establish and grow a healthy practice with RCM Centric's
-                  advanced healthcare medical billing services & coding,
-                  including unique strategy and integrated technology.
-                </p>
+              <div className="mt-9">
+                <div className="space-y-4  text-white">
+                  <p>
+                    For over 10 years, our{" "}
+                    <span className="text-red-400 font-semibold">
+                      medical billing company in the USA
+                    </span>{" "}
+                    have been helping physicians, clinics, group practices, and
+                    hospital-owned physician groups with their medical billing
+                    and coding tasks.
+                  
+                    Establish and grow a healthy practice with RCM Centric's
+                    advanced healthcare medical billing services & coding,
+                    including unique strategy and integrated technology.
+                  </p>
+                </div>
               </div>
 
               {/* Form Section */}
-             <SolutionSection />
+              <SolutionSection />
             </div>
 
             {/* Right Content - Video */}
