@@ -82,11 +82,11 @@ const [isVisible, setIsVisible] = useState(false);
       </CardHeader>
       <CardContent className="p-4 flex items-center justify-between gap-1">
         
-        <div className="flex-1  border-0">
+        <div className="flex-1  ">
           <Input
             type="email"
             placeholder="Work Email"
-            className="w-50 "
+            className="w-50 border border-gray-400  focus:border-gray-300 focus:ring-0 focus:outline-none "
           />
         </div>
         <Button className="bg-blue-600 text-white hover:bg-blue-700  px-6 py-2">
