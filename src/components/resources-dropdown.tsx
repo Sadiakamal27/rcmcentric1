@@ -2,6 +2,7 @@
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { ChevronDown } from "lucide-react"
+import Link from "next/link"
 
 export function ResourcesDropdown() {
   return (
@@ -25,9 +26,11 @@ export function ResourcesDropdown() {
         <DropdownMenuItem className="cursor-pointer hover:bg-gray-50 p-3 text-gray-700 hover:text-blue-600">
           Support Center
         </DropdownMenuItem>
+        <Link href="/TalktoSales" target="_blank" rel="noopener noreferrer">
         <DropdownMenuItem className="cursor-pointer hover:bg-gray-50 p-3 text-gray-700 hover:text-blue-600">
           Talk To Sales
         </DropdownMenuItem>
+        </Link>
       </DropdownMenuContent>
     </DropdownMenu>
   )
