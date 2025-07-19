@@ -66,9 +66,11 @@ function Header() {
               Get Pricing
             </Button>
             </Link>
-            <Button className=" rounded-full bg-blue-600 hover:bg-blue-700 hover:bg-red-500 hover:text-white text-white font-bold">
+             <Link href="/ContactUs" target="_blank" rel="noopener noreferrer">
+            <Button className=" rounded-full bg-blue-600  hover:bg-red-500 hover:text-white text-white font-bold">
               Contact Us
             </Button>
+            </Link>
           </div>
         </div>
       </header>
