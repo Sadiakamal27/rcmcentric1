@@ -6,7 +6,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 export default function ContactSection() {
   return (
     <>
-      <div className="relative bg-blue-600 text-white  py-20 px-10 md:px-12">
+      <div className="relative bg-blue-800 text-white  py-20 px-10 md:px-12">
         {/* Content */}
         <div className="relative z-10 max-w-4xl pl-29  text-left">
           <h2 className="text-5xl font-extrabold mb-4">Contact Us</h2>
@@ -54,7 +54,7 @@ export default function ContactSection() {
               />
             </div>
             <div>
-              <label className="text-lg font-bold text-blue-600  mb-2 block">
+              <label className="text-lg font-bold text-blue-800  mb-2 block">
                 What would you like to know? *
               </label>
               <div className="flex flex-wrap gap-4">
@@ -96,7 +96,7 @@ export default function ContactSection() {
                 Privacy Policy.
               </label>
             </div>
-            <Button className="w-25 bg-blue-600 text-white rounded-b-md font-bold hover:bg-red-500">
+            <Button className="w-25 bg-blue-800 text-white rounded-b-md font-bold hover:bg-red-500">
               Submit Now
             </Button>
           </form>
