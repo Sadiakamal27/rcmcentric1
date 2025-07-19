@@ -23,7 +23,7 @@ export default function Footer() {
         <div className="text-center items-center ">
           <Button
             variant="outline"
-            className="bg-blue-600 text-lg w-110 text-white hover:bg-red-500  px-6 py-2 rounded"
+            className="bg-blue-600 text-lg w-110 border border-none text-white hover:bg-red-500  px-6 py-2 rounded"
           >
             Get Started with RCM Centric
           </Button>
