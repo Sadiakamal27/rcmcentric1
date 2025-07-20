@@ -438,7 +438,7 @@ export default function FeaturesPage() {
             </section>
             {/* End Section: Peace of Mind */}
 
-            <section className="py-10 lg:py-16 bg-white">
+            <section className="py-10 lg:py-16 bg-blue-50">
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 px-2 sm:px-4">
                     {/* Left: Text and Button */}
                     <div className="flex-1 max-w-xl text-left">
