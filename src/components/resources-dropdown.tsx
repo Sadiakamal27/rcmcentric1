@@ -17,9 +17,11 @@ export function ResourcesDropdown() {
         <DropdownMenuItem className="cursor-pointer hover:bg-gray-50 p-3 text-gray-700 hover:text-blue-600">
           Blog & Articles
         </DropdownMenuItem>
+         <Link href="/FAQs" target="_blank" rel="noopener noreferrer">
         <DropdownMenuItem className="cursor-pointer hover:bg-gray-50 p-3 text-gray-700 hover:text-blue-600">
           Read FAQ's
         </DropdownMenuItem>
+        </Link>
         <DropdownMenuItem className="cursor-pointer hover:bg-gray-50 p-3 text-gray-700 hover:text-blue-600">
           View Pricing
         </DropdownMenuItem>
