@@ -33,9 +33,9 @@ export default function MedicalBillingPage() {
           </div>
         </div>
         {/* Right Content - Video */}
-        <div className="w-full md:w-[650px] flex justify-center items-center">
+        <div className="w-full  md:w-[650px] flex justify-center items-center">
           <video
-            className="w-full h-[220px] sm:h-[400px] object-cover rounded-lg  pointer-events-none"
+            className="w-full h-[600px] sm:h-[700px] object-cover rounded-lg  pointer-events-none"
             autoPlay
             loop
             muted
